@@ -1,0 +1,39 @@
+% Outline of the main script: BuildMultifractalTree
+
+Procedure BuildMultifractalTree
+
+%%%%%%%%%%%
+% Level 1 %
+%%%%%%%%%%%
+Scale <-- rand(1)				% Randomly set the scale of first tree.
+
+                    ----
+  Leaves{1} 				   |
+  Node_Coords{1} 	     |    
+  Progenies{1}         |    <-- MakeTree(Scale, M, G)      % Call function MakeTree to make the first tree; record data.
+  Parent{1}            |
+  Leaf_Coords{1}       |
+                    ----
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Levels 2 through N %
+%%%%%%%%%%%%%%%%%%%%%%
+
+n <-- 1	% n counts iterations.
+
+while n < N
+  for i from 1 to L(n)	% Loop through every leaf in iterate n
+
+    Scale <-- Leaves{n}(i) * rand(1)	% Generate the child tree scale as a random number less than the parent leaf
+
+                     ----
+    Leaves{n+1}         |
+    Progenies{n+1}      |
+    Node_Coords{n+1}    |    <-- MakeTree(Scale, M, G)   	% Generate the ith offspring tree of iterate n
+    Parent{n+1} 			  |	
+    Leaf_Coords{n+1}	  |	
+                     ----
+
+		end
+		increment n
+	end
