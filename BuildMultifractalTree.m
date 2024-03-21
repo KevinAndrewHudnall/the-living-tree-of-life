@@ -178,17 +178,3 @@ for i = 1:size(S, 2)
         H(j, i) = log(S(j - 1, i));
     end
 end
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Calculate the Fractal Dimensions D_F %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-D_F = zeros(size(H));
-for j = 1:size(H, 2)
-    for i = 2:size(H, 1)
-        D_F(i, j) = H(i, j) ./ log(S(i, j));
-    end
-end
-
-
-
