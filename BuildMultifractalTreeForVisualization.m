@@ -244,17 +244,6 @@ for i = 1:size(S, 2)
     end
 end
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Get the fractal dimensions of all paths %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-D_F = zeros(size(H));
-for j = 1:size(H, 2)
-    for i = 2:size(H, 1)
-        D_F(i, j) = H(i, j) ./ log(S(i, j));
-    end
-end
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Plot the multifractal tree %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
