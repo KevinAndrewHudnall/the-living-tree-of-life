@@ -4,13 +4,15 @@ A random iterated function system that implements nestedness, duality, and rando
 
 # Usage
 
-* The script "Main_Script.m" builds a multifractal tree. The script calls functions "BuildMultifractalTreeFn", "MakeRandomTree", and "CalculateFractalDims"
+* The script "Main_Script.m" builds a multifractal tree. The script calls functions "BuildMultifractalTreeFn", "MakeRandomTree", "CalculateFractalDims", and "MfDfaFn".
 
 * The function "BuildMultifractalTreeFn" generates a multifractal tree, where the inputs are the maximum number of offspring and the maximum number of generations possible for every iteration of the Galton-Watson process, as well as the total number of system iterations. The main data structures returned are a scale matrix S, a progeny matrix P, an entropy matrix H, and a fractal dimensions matrix D_F
 
-* The function "MakeRandomTree.m" uses the Galton-Watson branching process to generate a random tree at a given scale and with a maximum number of generations and progeny. This function is called repeatedly by the function "BuildMultifractalTreeFn.m".
+* The function "MakeRandomTree" uses the Galton-Watson branching process to generate a random tree at a given scale and with a maximum number of generations and progeny. This function is called repeatedly by the function "BuildMultifractalTreeFn".
 
-* The script "Main_Script_Visualization.m" builds a multifractal tree that is mapped to the unit square so it can be visualized, and then zooms through it. The script calls functions "BuildMultifractalTreeForVisualFn.m", "MakeRandomTreeForVisual.m", "CalculateFractalDims.m", and "FractalZoom.m"
+* The function "MfDfaFn.m" is called with the scale matrix S as input. The function performs multifractal detrended fluctuation analysis for every column in S (i.e., every path). One must also pass a range of moments and a vector of box sizes. The function returns the generalized Hurst indices for each path for all moments chosen, thus giving an indication of the multifractality of the structure.
+
+* The script "Main_Script_Visualization.m" builds a multifractal tree that is mapped to the unit square so it can be visualized, and then zooms through it. The script calls functions "BuildMultifractalTreeForVisualFn.m", "MakeRandomTreeForVisual.m", "CalculateFractalDims.m", "MfDfaFn", and "FractalZoom.m"
 
 * The function "BuildMultifractalTreeForVisualFn.m" generates a multifractal tree mapped to the unit square, where the inputs are the maximum number of offspring and the maximum number of generations possible for every iteration of the Galton-Watson process, as well as the total number of system iterations. The main data structures returned are a scale matrix S, a progeny matrix P, an entropy matrix H, and fractal dimensions D_F.
 
