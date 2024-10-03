@@ -4,7 +4,7 @@ A random iterated function system that implements nestedness, duality, and rando
 
 # Usage
 
-* The script "Main_Script.m" builds a multifractal tree. The script calls functions "BuildMultifractalTreeFn", "MakeRandomTree.m", and "CalculateFractalDims.m"
+* The script "Main_Script.m" builds a multifractal tree. The script calls functions "BuildMultifractalTreeFn", "MakeRandomTree", and "CalculateFractalDims"
 
 * The function "BuildMultifractalTreeFn" generates a multifractal tree, where the inputs are the maximum number of offspring and the maximum number of generations possible for every iteration of the Galton-Watson process, as well as the total number of system iterations. The main data structures returned are a scale matrix S, a progeny matrix P, an entropy matrix H, and a fractal dimensions matrix D_F
 
