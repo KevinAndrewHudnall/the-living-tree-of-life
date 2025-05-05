@@ -1,6 +1,6 @@
 # the-living-tree-of-life
 
-A random iterated function system that implements nestedness, duality, and randomness to generate a multifractal tree of life, as described in the associated article: Hudnall & D'Souza (2025), Journal of Theoretical Biology. DOI: 10.1016/j.jtbi.2025.112121.
+A random iterated function system that implements nestedness, duality, and randomness to generate a multifractal tree of life, as described in the associated article: Hudnall & D'Souza (2025), Journal of Theoretical Biology. DOI: 10.1016/j.jtbi.2025.112121. If you use this code, please cite the associated article.
 
 # Usage
 
